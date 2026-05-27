@@ -17,7 +17,7 @@ window.PROPERTIES = [
     location: "Muncie, IN",
     beds: 2,
     baths: 1,
-    rent: 900,
+    rent: 800,
     availableDate: "Available August 1st",
     description:
       "Bright, well-maintained home with updated finishes, a comfortable layout, and responsive on-site management. Ideal for tenants looking for a straightforward rental experience.",
