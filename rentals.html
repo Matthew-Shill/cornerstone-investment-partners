@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Browse available rental properties from Cornerstone Investment Partners."
+    />
+    <title>Available Rentals | Cornerstone Investment Partners</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="icon"
+      href="assets/logos/Cornerstone%20Investment%20Partners%20transparent.png"
+      type="image/png"
+    />
+  </head>
+  <body class="site-body has-hero">
+    <header id="site-header"></header>
+
+    <main>
+      <header class="page-header">
+        <div
+          class="page-header-bg"
+          style="background-image: url('assets/properties/e77fbdab17281c38cc154a70d4a5e4e7l-b2607775896rd-w1280_h960.webp')"
+          aria-hidden="true"
+        ></div>
+        <div class="container reveal">
+          <p class="eyebrow">Listings</p>
+          <h1>Available Rentals</h1>
+          <p>
+            Browse active listings with photos, details, and a direct path to
+            inquire. Updated as units become available or are filled.
+          </p>
+        </div>
+      </header>
+
+      <section class="section">
+        <div class="container" id="rentals-list">
+          <!-- Populated by js/main.js from js/properties.js -->
+        </div>
+      </section>
+
+      <section class="cta-band">
+        <div class="container reveal">
+          <h2>Do not see what you are looking for?</h2>
+          <p>Contact us — we are happy to answer questions about upcoming availability.</p>
+          <a href="contact.html" class="btn btn-primary">Contact Us</a>
+        </div>
+      </section>
+    </main>
+
+    <footer id="site-footer"></footer>
+
+    <script src="js/site-config.js"></script>
+    <script src="js/properties.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

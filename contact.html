@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact Cornerstone Investment Partners — questions about rentals, applications, maintenance, and more."
+    />
+    <title>Contact Us | Cornerstone Investment Partners</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="icon"
+      href="assets/logos/Cornerstone%20Investment%20Partners%20transparent.png"
+      type="image/png"
+    />
+  </head>
+  <body class="site-body has-hero">
+    <header id="site-header"></header>
+
+    <main>
+      <header class="page-header">
+        <div
+          class="page-header-bg"
+          style="background-image: url('assets/properties/e77fbdab17281c38cc154a70d4a5e4e7l-b490652458rd-w1280_h960.webp')"
+          aria-hidden="true"
+        ></div>
+        <div class="container reveal">
+          <p class="eyebrow">Get in touch</p>
+          <h1>Contact Us</h1>
+          <p>
+            Tenants, applicants, contractors, and partners — we aim to respond
+            promptly to every message.
+          </p>
+        </div>
+      </header>
+
+      <div class="container contact-layout">
+        <div class="contact-info reveal">
+          <span class="section-label">Direct contact</span>
+          <h2>We are here to help</h2>
+          <ul>
+            <li>
+              <span class="contact-note">Phone</span><br />
+              <a id="contact-phone" href="tel:"></a>
+            </li>
+            <li>
+              <span class="contact-note">Email</span><br />
+              <a id="contact-email" href="mailto:"></a>
+            </li>
+          </ul>
+          <p class="contact-note">
+            For rental inquiries, include the property address in your message
+            so we can respond faster.
+          </p>
+        </div>
+
+        <div class="contact-form-wrap reveal reveal-delay-1">
+          <h2>Send a message</h2>
+          <form id="contact-form" method="POST">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" />
+            </div>
+            <div class="form-group">
+              <label for="property">Property you are asking about</label>
+              <input
+                type="text"
+                id="property"
+                name="property"
+                placeholder="Address or general question"
+              />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p class="form-hint">
+              By submitting, you agree we may contact you about your inquiry.
+            </p>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer id="site-footer"></footer>
+
+    <script src="js/site-config.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var c = window.SITE_CONFIG || {};
+        var phone = document.getElementById("contact-phone");
+        var email = document.getElementById("contact-email");
+        if (phone && c.phone) {
+          phone.textContent = c.phone;
+          phone.href = "tel:" + c.phone.replace(/\D/g, "");
+        }
+        if (email && c.email) {
+          email.textContent = c.email;
+          email.href = "mailto:" + c.email;
+        }
+      });
+    </script>
+  </body>
+</html>
