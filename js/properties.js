@@ -13,15 +13,16 @@ window.PROPERTIES = [
   {
     id: "sample-rental-1",
     active: true,
-    address: "123 Example Street",
-    location: "Your City, ST",
-    beds: 3,
-    baths: 2,
-    rent: 1850,
-    availableDate: "Available Now",
+    address: "108 N Claypool Rd",
+    location: "Muncie, IN",
+    beds: 2,
+    baths: 1,
+    rent: 900,
+    availableDate: "Available August 1st",
     description:
       "Bright, well-maintained home with updated finishes, a comfortable layout, and responsive on-site management. Ideal for tenants looking for a straightforward rental experience.",
     photos: [
+      "assets/properties/Copy of e77fbdab17281c38cc154a70d4a5e4e7l-b1968164748rd-w1280_h960.webp",
       "assets/properties/e77fbdab17281c38cc154a70d4a5e4e7l-b2669710828rd-w1280_h960.webp",
       "assets/properties/e77fbdab17281c38cc154a70d4a5e4e7l-b2607775896rd-w1280_h960.webp",
       "assets/properties/e77fbdab17281c38cc154a70d4a5e4e7l-b2514954879rd-w1280_h960.webp",

@@ -1281,6 +1281,15 @@ h3,
   color: var(--color-muted);
 }
 
+.form-success {
+  margin: 0 0 1.25rem;
+  padding: 0.85rem 1rem;
+  font-size: 0.95rem;
+  color: var(--color-slate);
+  background: rgba(154, 123, 82, 0.12);
+  border-radius: var(--radius-sm);
+}
+
 /* Lightbox */
 .lightbox {
   position: fixed;

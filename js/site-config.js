@@ -8,6 +8,6 @@ window.SITE_CONFIG = {
   email: "rentwithcip@gmail.com",
   // Apartments.com tenant payment portal (replace with your live URL)
   payRentUrl: "https://www.apartments.com/",
-  // Optional: Formspree form ID for contact submissions (leave empty to use mailto)
+  // Optional: Formspree form ID (leave empty to email via formsubmit.co to `email`)
   formspreeId: "",
 };

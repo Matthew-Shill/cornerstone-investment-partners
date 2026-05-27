@@ -272,6 +272,17 @@
     render();
   }
 
+  function ensureFormHiddenField(form, name, value) {
+    let field = form.querySelector(`input[type="hidden"][name="${name}"]`);
+    if (!field) {
+      field = document.createElement("input");
+      field.type = "hidden";
+      field.name = name;
+      form.appendChild(field);
+    }
+    field.value = value;
+  }
+
   function initContactForm() {
     const form = document.getElementById("contact-form");
     if (!form) return;
@@ -283,22 +294,37 @@
       propertyField.value = params.get("property");
     }
 
+    if (params.get("sent") === "1") {
+      const notice = document.createElement("p");
+      notice.className = "form-success";
+      notice.setAttribute("role", "status");
+      notice.textContent =
+        "Thank you — your message was sent. We'll respond as soon as we can.";
+      form.prepend(notice);
+    }
+
     if (config.formspreeId) {
       form.action = `https://formspree.io/f/${config.formspreeId}`;
       form.method = "POST";
-    } else {
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const data = new FormData(form);
-        const subject = encodeURIComponent(
-          `Inquiry from ${data.get("name")} — Cornerstone Investment Partners`
-        );
-        const body = encodeURIComponent(
-          `Name: ${data.get("name")}\nEmail: ${data.get("email")}\nPhone: ${data.get("phone")}\nProperty: ${data.get("property")}\n\n${data.get("message")}`
-        );
-        window.location.href = `mailto:${config.email}?subject=${subject}&body=${body}`;
-      });
+      return;
     }
+
+    const recipient = config.email || "rentwithcip@gmail.com";
+    form.action = `https://formsubmit.co/${encodeURIComponent(recipient)}`;
+    form.method = "POST";
+
+    const nextUrl = new URL(window.location.href);
+    nextUrl.search = "";
+    nextUrl.searchParams.set("sent", "1");
+
+    ensureFormHiddenField(
+      form,
+      "_subject",
+      "New inquiry — Cornerstone Investment Partners"
+    );
+    ensureFormHiddenField(form, "_captcha", "false");
+    ensureFormHiddenField(form, "_template", "table");
+    ensureFormHiddenField(form, "_next", nextUrl.toString());
   }
 
   function initPayRentLinks() {

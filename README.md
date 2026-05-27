@@ -28,7 +28,7 @@ Update:
 
 - `phone` and `email` — shown in the footer and on the contact page
 - `payRentUrl` — your Apartments.com tenant payment portal URL
-- `formspreeId` (optional) — [Formspree](https://formspree.io) form ID for contact form submissions; leave empty to open the visitor’s email client via `mailto:`
+- `formspreeId` (optional) — [Formspree](https://formspree.io) form ID; leave empty to send submissions to `email` via [FormSubmit](https://formsubmit.co) (first submission triggers a one-time activation email)
 
 ### 2. Rental listings — `js/properties.js`
 
